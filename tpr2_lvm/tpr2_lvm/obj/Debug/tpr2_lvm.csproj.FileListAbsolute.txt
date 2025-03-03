@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\bin\Debug\tpr2_lvm.exe.config
+C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\bin\Debug\tpr2_lvm.exe
+C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\bin\Debug\tpr2_lvm.pdb
+C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\obj\Debug\tpr2_lvm.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\obj\Debug\tpr2_lvm.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\obj\Debug\tpr2_lvm.Form1.resources
+C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\obj\Debug\tpr2_lvm.Properties.Resources.resources
+C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\obj\Debug\tpr2_lvm.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\obj\Debug\tpr2_lvm.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\obj\Debug\tpr2_lvm.exe
+C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\obj\Debug\tpr2_lvm.pdb
+C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\obj\Debug\tpr2_lvm.formResource.resources
+C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\obj\Debug\tpr2_lvm.FormDangerState.resources
+C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\obj\Debug\tpr2_lvm.FormInitEvent.resources
