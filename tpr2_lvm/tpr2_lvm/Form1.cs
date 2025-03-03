@@ -18,12 +18,10 @@ namespace tpr2_lvm
         public Form1()
         {
             InitializeComponent();
-            NumOfResources = 0;
             listResources = new List<Resource>(); 
 
         }
-
-        int NumOfResources;      
+      
         List<Resource> listResources;
 
 
@@ -37,8 +35,7 @@ namespace tpr2_lvm
                 if(resourceName != "")
                 {
                     Resource resource = new Resource();
-                    NumOfResources++;
-                    resource.Id = "R" + NumOfResources.ToString();
+                    resource.Id = "R" + (listResources.Count+1).ToString();
                     resource.Name = resourceName;
                     resource.DangerStates = new List<DangerState>();
                     listResources.Add(resource);
