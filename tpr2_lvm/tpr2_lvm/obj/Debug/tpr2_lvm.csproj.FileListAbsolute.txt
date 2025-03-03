@@ -12,3 +12,4 @@ C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\obj\Deb
 C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\obj\Debug\tpr2_lvm.formResource.resources
 C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\obj\Debug\tpr2_lvm.FormDangerState.resources
 C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\obj\Debug\tpr2_lvm.FormInitEvent.resources
+C:\Users\user\Desktop\Учеба\C# программы\tpr2_lvm\tpr2_lvm\obj\Debug\tpr2_lvm.FormEnterFormula.resources

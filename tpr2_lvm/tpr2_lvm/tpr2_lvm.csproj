@@ -59,6 +59,12 @@
     <Compile Include="FormDangerState.Designer.cs">
       <DependentUpon>FormDangerState.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEnterFormula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEnterFormula.Designer.cs">
+      <DependentUpon>FormEnterFormula.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormInitEvent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDangerState.resx">
       <DependentUpon>FormDangerState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEnterFormula.resx">
+      <DependentUpon>FormEnterFormula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInitEvent.resx">
       <DependentUpon>FormInitEvent.cs</DependentUpon>

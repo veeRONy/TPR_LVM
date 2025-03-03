@@ -118,7 +118,7 @@
             this.Controls.Add(this.btnOK);
             this.Name = "FormInitEvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormInitEvent";
+            this.Text = "Инициирующее событие";
             this.Load += new System.EventHandler(this.FormInitEvent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tbProbability)).EndInit();
             this.ResumeLayout(false);

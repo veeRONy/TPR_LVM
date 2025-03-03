@@ -52,19 +52,22 @@
             this.btnEditResource = new System.Windows.Forms.Button();
             this.btnEditDangerState = new System.Windows.Forms.Button();
             this.bntEditInitEvent = new System.Windows.Forms.Button();
-            this.tbFAL = new System.Windows.Forms.RichTextBox();
+            this.tbFormula = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tbPF = new System.Windows.Forms.RichTextBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.tbLoss = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCalculate = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbProbability = new System.Windows.Forms.TextBox();
+            this.tbRisk = new System.Windows.Forms.TextBox();
+            this.tbAllRisk = new System.Windows.Forms.TextBox();
+            this.tbFAL = new System.Windows.Forms.RichTextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnEnterFormula = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,9 +163,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(770, 37);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(173, 16);
+            this.label4.Size = new System.Drawing.Size(70, 16);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Функция алгебры логики:";
+            this.label4.Text = "Формула:";
             // 
             // label5
             // 
@@ -296,20 +299,21 @@
             this.bntEditInitEvent.UseVisualStyleBackColor = true;
             this.bntEditInitEvent.Click += new System.EventHandler(this.bntEditInitEvent_Click);
             // 
-            // tbFAL
+            // tbFormula
             // 
-            this.tbFAL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbFAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbFAL.Location = new System.Drawing.Point(773, 56);
-            this.tbFAL.Name = "tbFAL";
-            this.tbFAL.Size = new System.Drawing.Size(255, 66);
-            this.tbFAL.TabIndex = 27;
-            this.tbFAL.Text = "";
+            this.tbFormula.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbFormula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbFormula.Location = new System.Drawing.Point(773, 56);
+            this.tbFormula.Name = "tbFormula";
+            this.tbFormula.ReadOnly = true;
+            this.tbFormula.Size = new System.Drawing.Size(255, 66);
+            this.tbFormula.TabIndex = 27;
+            this.tbFormula.Text = "";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(770, 133);
+            this.label8.Location = new System.Drawing.Point(770, 255);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(167, 16);
             this.label8.TabIndex = 28;
@@ -319,9 +323,10 @@
             // 
             this.tbPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbPF.Location = new System.Drawing.Point(773, 152);
+            this.tbPF.Location = new System.Drawing.Point(773, 274);
             this.tbPF.Name = "tbPF";
-            this.tbPF.Size = new System.Drawing.Size(255, 96);
+            this.tbPF.ReadOnly = true;
+            this.tbPF.Size = new System.Drawing.Size(255, 68);
             this.tbPF.TabIndex = 29;
             this.tbPF.Text = "";
             // 
@@ -344,19 +349,20 @@
             this.tbLoss.Size = new System.Drawing.Size(221, 22);
             this.tbLoss.TabIndex = 31;
             // 
-            // button2
+            // btnCalculate
             // 
-            this.button2.Location = new System.Drawing.Point(773, 271);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(255, 35);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Расчет";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCalculate.Location = new System.Drawing.Point(773, 133);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.Size = new System.Drawing.Size(87, 35);
+            this.btnCalculate.TabIndex = 32;
+            this.btnCalculate.Text = "Расчет";
+            this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(770, 338);
+            this.label9.Location = new System.Drawing.Point(770, 354);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(251, 16);
             this.label9.TabIndex = 33;
@@ -365,7 +371,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(773, 396);
+            this.label10.Location = new System.Drawing.Point(770, 407);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(164, 16);
             this.label10.TabIndex = 34;
@@ -380,29 +386,59 @@
             this.label11.TabIndex = 35;
             this.label11.Text = "Оценка риска ИС:";
             // 
-            // textBox1
+            // tbProbability
             // 
-            this.textBox1.Location = new System.Drawing.Point(773, 357);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(255, 22);
-            this.textBox1.TabIndex = 36;
+            this.tbProbability.Location = new System.Drawing.Point(773, 373);
+            this.tbProbability.Name = "tbProbability";
+            this.tbProbability.ReadOnly = true;
+            this.tbProbability.Size = new System.Drawing.Size(255, 22);
+            this.tbProbability.TabIndex = 36;
             // 
-            // textBox2
+            // tbRisk
             // 
-            this.textBox2.Location = new System.Drawing.Point(773, 418);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(255, 22);
-            this.textBox2.TabIndex = 37;
+            this.tbRisk.Location = new System.Drawing.Point(773, 426);
+            this.tbRisk.Name = "tbRisk";
+            this.tbRisk.ReadOnly = true;
+            this.tbRisk.Size = new System.Drawing.Size(255, 22);
+            this.tbRisk.TabIndex = 37;
             // 
-            // textBox3
+            // tbAllRisk
             // 
-            this.textBox3.Location = new System.Drawing.Point(773, 473);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(255, 22);
-            this.textBox3.TabIndex = 38;
+            this.tbAllRisk.Location = new System.Drawing.Point(773, 473);
+            this.tbAllRisk.Name = "tbAllRisk";
+            this.tbAllRisk.ReadOnly = true;
+            this.tbAllRisk.Size = new System.Drawing.Size(255, 22);
+            this.tbAllRisk.TabIndex = 38;
+            // 
+            // tbFAL
+            // 
+            this.tbFAL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbFAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbFAL.Location = new System.Drawing.Point(773, 195);
+            this.tbFAL.Name = "tbFAL";
+            this.tbFAL.ReadOnly = true;
+            this.tbFAL.Size = new System.Drawing.Size(255, 57);
+            this.tbFAL.TabIndex = 40;
+            this.tbFAL.Text = "";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(770, 176);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(173, 16);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "Функция алгебры логики:";
+            // 
+            // btnEnterFormula
+            // 
+            this.btnEnterFormula.Location = new System.Drawing.Point(866, 132);
+            this.btnEnterFormula.Name = "btnEnterFormula";
+            this.btnEnterFormula.Size = new System.Drawing.Size(162, 36);
+            this.btnEnterFormula.TabIndex = 41;
+            this.btnEnterFormula.Text = "Изменить формулу";
+            this.btnEnterFormula.UseVisualStyleBackColor = true;
+            this.btnEnterFormula.Click += new System.EventHandler(this.btnEnterFormula_Click);
             // 
             // Form1
             // 
@@ -410,17 +446,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(215)))), ((int)(((byte)(225)))));
             this.ClientSize = new System.Drawing.Size(1064, 534);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnEnterFormula);
+            this.Controls.Add(this.tbFAL);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.tbAllRisk);
+            this.Controls.Add(this.tbRisk);
+            this.Controls.Add(this.tbProbability);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.tbLoss);
             this.Controls.Add(this.tbPF);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.tbFAL);
+            this.Controls.Add(this.tbFormula);
             this.Controls.Add(this.bntEditInitEvent);
             this.Controls.Add(this.btnEditDangerState);
             this.Controls.Add(this.btnEditResource);
@@ -479,19 +518,22 @@
         private System.Windows.Forms.Button btnEditResource;
         private System.Windows.Forms.Button btnEditDangerState;
         private System.Windows.Forms.Button bntEditInitEvent;
-        private System.Windows.Forms.RichTextBox tbFAL;
+        private System.Windows.Forms.RichTextBox tbFormula;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RichTextBox tbPF;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.TextBox tbLoss;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbProbability;
+        private System.Windows.Forms.TextBox tbRisk;
+        private System.Windows.Forms.TextBox tbAllRisk;
+        private System.Windows.Forms.RichTextBox tbFAL;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnEnterFormula;
     }
 }
 

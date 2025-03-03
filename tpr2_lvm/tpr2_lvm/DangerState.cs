@@ -10,8 +10,12 @@ namespace tpr2_lvm
     {
         public string Name { get; set; }
         public string Id { get; set; }
+        public string Formula { get; set; }
         public string FAL { get; set; }
+        public string PF { get; set; }
         public List<InitEvent> InitEvents { get; set; }
+        public double Risk { get; set; }
+        public double P { get; set; }
         public double loss { get; set; }
 
     }
