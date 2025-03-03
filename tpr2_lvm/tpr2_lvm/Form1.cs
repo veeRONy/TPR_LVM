@@ -562,17 +562,20 @@ namespace tpr2_lvm
             {
                 int index = listBoxDangerStates.SelectedIndex;
                 int resIndex = listBoxResources.SelectedIndex;
-                DangerState state = listResources[resIndex].DangerStates[index];
-
-                FormEnterFormula form = new FormEnterFormula(state.Formula);               
-
-                if (form.ShowDialog() == DialogResult.OK)
+                if (listResources[resIndex].DangerStates.Count != 0)
                 {
-                    string formula = form.formula;
-                    if (formula != "")
+                    DangerState state = listResources[resIndex].DangerStates[index];
+
+                    FormEnterFormula form = new FormEnterFormula(state.Formula);
+
+                    if (form.ShowDialog() == DialogResult.OK)
                     {
-                        state.Formula = formula;
-                        BindResourceData();
+                        string formula = form.formula;
+                        if (formula != "")
+                        {
+                            state.Formula = formula;
+                            BindResourceData();
+                        }
                     }
                 }
             }
