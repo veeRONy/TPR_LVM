@@ -81,6 +81,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOK);
             this.Name = "FormEnterFormula";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ввод формулы";
             this.Load += new System.EventHandler(this.FormEnterFormula_Load);
             this.ResumeLayout(false);
